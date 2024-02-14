@@ -11,11 +11,6 @@ const LoginScreen = ({navigation}) => {
     GoogleSignin.configure();
   }, []);
 
-  useEffect(() => {
-    GoogleSignin.configure();
-  }, []);
-
-  // Somewhere in your code
   const googleLogin = async () => {
     try {
       await GoogleSignin.hasPlayServices();
@@ -23,6 +18,7 @@ const LoginScreen = ({navigation}) => {
       console.log('userInfo', userInfo);
       navigation.navigate('HomeScreen');
     } catch (error) {
+      console.log(error);
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         console.log(error);
       } else if (error.code === statusCodes.IN_PROGRESS) {
@@ -31,7 +27,6 @@ const LoginScreen = ({navigation}) => {
         console.log(error);
       } else {
         console.log(' some other error happened');
-        navigation.navigate('HomeScreen');
       }
     }
   };
