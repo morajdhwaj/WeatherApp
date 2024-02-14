@@ -6,7 +6,7 @@ const IntroScreen = () => {
   return (
     <View>
       <View style={tw``}>
-        <Text style={tw` text-black dark:text-white`}>Hello World</Text>
+        <Text style={tw` text-black dark:text-white`}>Hello Intro</Text>
       </View>
     </View>
   );
