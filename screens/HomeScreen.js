@@ -67,7 +67,7 @@ const HomeScreen = ({navigation}) => {
     console.log('value', value);
   };
 
-  const handleTextDebounce = useCallback(debounce(handleSearch, 1200), []);
+  const handleTextDebounce = useCallback(debounce(handleSearch, 1000), []);
 
   const {current, location} = weather;
 

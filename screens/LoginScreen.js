@@ -27,6 +27,7 @@ const LoginScreen = ({navigation}) => {
         console.log(error);
       } else {
         console.log(' some other error happened');
+        navigation.navigate('HomeScreen');
       }
     }
   };
